@@ -242,27 +242,22 @@ $(':required').one('blur keydown', function() {
 });
 
 function calculatePrice(productID) {
-  var jordan = 0, mouse = 0, bear = 0, IPhone = 0;
   var x = document.getElementById(productID).value;
   if(productID == 'IPhone'){
-	document.getElementById("IPhonePrice").innerHTML = "$" + x;
-	IPhone = x;
+	document.getElementById("IPhonePrice").innerHTML = x;
   } else if(productID == 'bear'){
-	document.getElementById("bearPrice").innerHTML = "$" + x;
-	bear = x;
+	document.getElementById("bearPrice").innerHTML = x;
   } else if(productID == 'mouse'){
-	document.getElementById("mousePrice").innerHTML = "$" + x;
-	mouse = x;
+	document.getElementById("mousePrice").innerHTML = x;
   } else if(productID == 'jordan'){
-	document.getElementById("jordanPrice").innerHTML = "$" + x;
-	jordan = x;
+	document.getElementById("jordanPrice").innerHTML = x;
   }
   
-  var price = jordan + mouse + bear + IPhone;
-  document.getElementById("priceTotal").innerHTML = "$" + price;
+  totalPriceCalculator();
+  
 }
 
 function totalPriceCalculator() {
-	 var x = document.getElementById(productID).value;
-	 console.log("Hello world!");
+	 var x = parseFloat(document.getElementById("IPhonePrice").innerHTML)+parseFloat(document.getElementById("bearPrice").innerHTML)+parseFloat(document.getElementById("mousePrice").innerHTML)+parseFloat(document.getElementById("jordanPrice").innerHTML);
+	 document.getElementById("priceTotal").innerHTML = "$"+(x).toFixed(2);
  }
