@@ -240,3 +240,29 @@ $(':required').one('blur keydown', function() {
   console.log('touched', this);
   $(this).addClass('touched');
 });
+
+function calculatePrice(productID) {
+  var jordan = 0, mouse = 0, bear = 0, IPhone = 0;
+  var x = document.getElementById(productID).value;
+  if(productID == 'IPhone'){
+	document.getElementById("IPhonePrice").innerHTML = "$" + x;
+	IPhone = x;
+  } else if(productID == 'bear'){
+	document.getElementById("bearPrice").innerHTML = "$" + x;
+	bear = x;
+  } else if(productID == 'mouse'){
+	document.getElementById("mousePrice").innerHTML = "$" + x;
+	mouse = x;
+  } else if(productID == 'jordan'){
+	document.getElementById("jordanPrice").innerHTML = "$" + x;
+	jordan = x;
+  }
+  
+  var price = jordan + mouse + bear + IPhone;
+  document.getElementById("priceTotal").innerHTML = "$" + price;
+}
+
+function totalPriceCalculator() {
+	 var x = document.getElementById(productID).value;
+	 console.log("Hello world!");
+ }
