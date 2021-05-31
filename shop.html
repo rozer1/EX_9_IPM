@@ -36,43 +36,129 @@
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Add Customer</h1>
-			<form role="form" onsubmit="addCustomer()">
-				<div class="form-group">
-					<label>Full Name</label>
-					<input type="text" id="name" class="form-control" required="required" placeholder="Enter Name">
-				</div>
-				<div class="form-group">
-					<label>City</label>
-					<input type="text" id="city" class="form-control"  required="required" placeholder="Enter Adress">
-				</div>
-				<div class="form-group">
-					<label>Adress</label>
-					<input type="text" id="adress" class="form-control" required="required" placeholder="Enter Adress">
-				</div>
-				<div class="form-group">
-					<label>Email</label>
-					<input type="email" id="email" class="form-control" required="required" placeholder="Enter Email">
-				</div>
-				<div class="form-group">
-					<label for="postal_code">Zip Code</label>
-					<input type="text" id="postal_code" name="postal_code" class="form-control" required="required" placeholder="92-701" pattern="\d{2}-\d{3}" title="Format: (NN-NNN)">
-				</div>
-				<div class="form-group">
-					<label for="nip_number">NIP number</label>
-					<input type="text" id="nip_number" name="nip_number" class="form-control" required="required" placeholder="123-456-32-18" pattern="((\d{3}[- ]\d{3}[- ]\d{2}[- ]\d{2})|(\d{3}[- ]\d{2}[- ]\d{2}[- ]\d{3}))" title="Polish NIP format">
-				</div>
-				<div class="form-group">
-					<label for="phone_number">Phone number</label>
-					<input type="text" id="phone_number" placeholder="123-123-123" class="form-control" required="required" name="phone_number" pattern="[0-9]{3}(-)?[0-9]{3}(-)?[0-9]{3}" title="NNN-NNN-NNN or NNNNNNNNN format">
-				</div>
-				<div class="form-group">
-					<label for="id_card">ID card number</label>
-					<input type="text" id="id_card" name="id_card" placeholder="ABC123456" class="form-control" required="required" pattern="[a-zA-Z]{3}[0-9]{6}" title="Correct ID card number contains 3 numbers and 6 digits">
-				</div>
-				<button type="submit" class="btn btn-default">Add Customer</button>
-			</form><br></br>
-			<button type="button" OnClick="GetRandom()" class="btn btn-default">Generate random data</button>
+    <!-- Shopping cart table -->
+    <div class="card">
+        <div class="card-header">
+            <h2>Shop</h2>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered m-0">
+                <thead>
+                  <tr>
+                    <!-- Set columns width -->
+                    <th class="text-center py-3 px-4" style="min-width: 400px;">Product Name &amp; Details</th>
+                    <th class="text-right py-3 px-4" style="width: 100px;">Price</th>
+                    <th class="text-center py-3 px-4" style="width: 120px;">Quantity</th>
+                    <th class="text-right py-3 px-4" style="width: 100px;">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+        
+                  <tr>
+                    <td class="p-4">
+                      <div class="media align-items-center">
+                        <img src="https://toppng.com/uploads/preview/air-jordan-1-retro-bred-nike-air-jordan-1-bred-toe-11563389473amj4lppft7.png" class="d-block ui-w-40 ui-bordered mr-4" alt="">
+                        <div class="media-body">
+                          <a href="#" class="d-block text-dark">Air Jordan 1 Retro</a>
+                          <small>
+                            <span class="text-muted">Color:</span>
+                            <span class="ui-product-color ui-product-color-sm align-text-bottom" style="background:#e81e2c;"></span> &nbsp;
+                            <span class="text-muted">Size: </span> EU 37 &nbsp;
+                            <span class="text-muted">Ships from: </span> China
+                          </small>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-right font-weight-semibold align-middle p-4">$57.55</td>
+                    <td class="align-middle p-4"><input type="text" class="form-control text-center" value="2"></td>
+                    <td class="text-right font-weight-semibold align-middle p-4">$115.1</td>
+                  </tr>
+        
+                  <tr>
+                    <td class="p-4">
+                      <div class="media align-items-center">
+                        <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-black-select-2020?wid=940&hei=1112&fmt=png-alpha&.v=1604343702000" class="d-block ui-w-40 ui-bordered mr-4" alt="">
+                        <div class="media-body">
+                          <a href="#" class="d-block text-dark">iPhone 12</a>
+                          <small>
+                            <span class="text-muted">Color:</span>
+                            <span class="ui-product-color ui-product-color-sm align-text-bottom" style="background:#000;"></span> &nbsp;
+                            <span class="text-muted">Storage: </span> 256GB &nbsp;
+                            <span class="text-muted">Warranty: </span> Standard - 2 year &nbsp;
+                            <span class="text-muted">Ships from: </span> Germany
+                          </small>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-right font-weight-semibold align-middle p-4">$1049.00</td>
+                    <td class="align-middle p-4"><input type="text" class="form-control text-center" value="1"></td>
+                    <td class="text-right font-weight-semibold align-middle p-4">$1049.00</td>
+                  </tr>
+        
+                  <tr>
+                    <td class="p-4">
+                      <div class="media align-items-center">
+                        <img src="https://w7.pngwing.com/pngs/135/474/png-transparent-three-brown-bear-plush-toys-teddy-bear-plush-app-for-kids-giant-panda-bunch-bear-child-animals-hand-thumbnail.png" class="d-block ui-w-40 ui-bordered mr-4" alt="">
+                        <div class="media-body">
+                          <a href="#" class="d-block text-dark">Zestaw pluszowych misi</a>
+                          <small>
+                            <span class="text-muted">Ships from: </span> Germany
+                          </small>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-right font-weight-semibold align-middle p-4">$20.55</td>
+                    <td class="align-middle p-4"><input type="text" class="form-control text-center" value="1"></td>
+                    <td class="text-right font-weight-semibold align-middle p-4">$20.55</td>
+                  </tr>
+				  
+				  <tr>
+                    <td class="p-4">
+                      <div class="media align-items-center">
+                        <img src="https://www.logitech.com/content/dam/logitech/en/products/mice/m220/gallery/m220-charcoal-gallery-1.png" class="d-block ui-w-40 ui-bordered mr-4" alt="">
+                        <div class="media-body">
+                          <a href="#" class="d-block text-dark">Logitech M221</a>
+                          <small>
+                            <span class="text-muted">Ships from: </span> Germany
+                          </small>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-right font-weight-semibold align-middle p-4">$20.55</td>
+                    <td class="align-middle p-4"><input type="text" class="form-control text-center" value="1"></td>
+                    <td class="text-right font-weight-semibold align-middle p-4">$20.55</td>
+                  </tr>
+        
+                </tbody>
+              </table>
+            </div>
+            <!-- / Shopping cart table -->
+        
+            <div class="d-flex flex-wrap justify-content-between align-items-center pb-4">
+              <div class="mt-4">
+                <label class="text-muted font-weight-normal">Pick customer:</label>
+                <input type="text" placeholder="ABC" class="form-control">
+              </div>
+              <div class="d-flex">
+                <div class="text-right mt-4 mr-5">
+                  <label class="text-muted font-weight-normal m-0">Discount</label>
+                  <div class="text-large"><strong>$20</strong></div>
+                </div>
+                <div class="text-right mt-4">
+                  <label class="text-muted font-weight-normal m-0">Total price</label>
+                  <div class="text-large"><strong>$1164.65</strong></div>
+                </div>
+              </div>
+            </div>
+        
+            <div class="float-right">
+              <button type="button" class="btn btn-lg btn-primary mt-2">Generate invoice</button>
+            </div>
+        
+          </div>
+      </div>
+  </div>
         </div>
       </div>
     </div>
