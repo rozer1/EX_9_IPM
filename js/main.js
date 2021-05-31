@@ -26,6 +26,7 @@ $(document).ready(function(){
 	}
 });
 
+
 //Add Customer
 function addCustomer(){
 	var name = $('#name').val();
@@ -240,24 +241,3 @@ $(':required').one('blur keydown', function() {
   console.log('touched', this);
   $(this).addClass('touched');
 });
-
-function calculatePrice(productID) {
-  var x = document.getElementById(productID).value;
-  if(productID == 'IPhone'){
-	document.getElementById("IPhonePrice").innerHTML = x;
-  } else if(productID == 'bear'){
-	document.getElementById("bearPrice").innerHTML = x;
-  } else if(productID == 'mouse'){
-	document.getElementById("mousePrice").innerHTML = x;
-  } else if(productID == 'jordan'){
-	document.getElementById("jordanPrice").innerHTML = x;
-  }
-  
-  totalPriceCalculator();
-  
-}
-
-function totalPriceCalculator() {
-	 var x = parseFloat(document.getElementById("IPhonePrice").innerHTML)+parseFloat(document.getElementById("bearPrice").innerHTML)+parseFloat(document.getElementById("mousePrice").innerHTML)+parseFloat(document.getElementById("jordanPrice").innerHTML);
-	 document.getElementById("priceTotal").innerHTML = "$"+(x).toFixed(2);
- }
